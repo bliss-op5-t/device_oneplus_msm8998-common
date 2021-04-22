@@ -602,6 +602,13 @@ service vendor.thermal-engine /vendor/bin/thermal-engine
 service vendor.time_daemon /vendor/bin/time_daemon
     class main
     user system
-    group system
-    capabilities SYS_TIME
-    writepid /dev/cpuset/system-background/tasks
+    group system input wakelock uhid
+    capabilities BLOCK_SUSPEND
+    rlimit rtprio 10 10
+    task_profiles ServiceCapacityLow
+
+on property:sys.boot_completed=1
+    # Restrict permissions to socket file
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
+
