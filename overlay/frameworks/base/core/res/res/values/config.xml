@@ -560,4 +560,7 @@
         <!-- B y-intercept --> <item>-0.349361641294833436</item>
     </string-array>
 
+    <!-- Whether device has dash charging support -->
+    <bool name="config_hasDashCharger">true</bool>
+
 </resources>
