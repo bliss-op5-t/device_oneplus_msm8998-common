@@ -26,6 +26,14 @@
     <dimen name="tri_state_up_bottom_left_radius">0.0dip</dimen>
     <dimen name="tri_state_up_bottom_right_radius">24.0dip</dimen>
     
+    <!-- Whether device has physical tri state switch -->
+     <bool name="config_hasAlertSlider">true</bool>
+
+     <!-- The location of the devices physical tri state switch
+         0: Left side
+         1: Right side -->
+     <integer name="config_alertSliderLocation">0</integer>
+
     <!-- for 20dp of padding at 2.75px/dp at default density -->
        <dimen name="rounded_corner_content_padding">28px</dimen>
 
